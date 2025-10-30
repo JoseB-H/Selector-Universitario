@@ -3,102 +3,326 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ELIJEPE - Test Vocacional</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>ELIJEPE</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJ8gP3g+9W0k8/69XhYcEa9j6V5n5tXq3W8k7dM0jC1P6T+X6g0Q4kP8X5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- 🔹 HEADER -->
-  <header class="navbar">
-    <div class="logo">🎓 ELIJEPE</div>
+<nav class="navbar navbar-expand-lg navbar-dark px-4">
+    <div class="d-flex align-items-center me-auto">
+        <a class="navbar-brand fw-bold text-white" href="#">ELIJEPE</a>
+        
+        <div class="vocational-choice">
+            <img src="img/default pingui.png" alt="Penguin animado" class="penguin-left">
 
-    <div class="search-bar">
-      <input type="text" placeholder="Buscar" />
+            <div class="university-thought-bubble">
+                <span class="uni-icon icon-1">🎓</span>
+                <span class="uni-icon icon-2">🔬</span>
+                <span class="uni-icon icon-3">💻</span>
+                <span class="uni-icon icon-4">⚖️</span>
+                <span class="uni-icon icon-1">🎓</span>
+                <span class="uni-icon icon-2">🔬</span>
+                <span class="uni-icon icon-3">💻</span>
+                <span class="uni-icon icon-4">⚖️</span>
+            </div>
+        </div>
     </div>
 
-    <div class="nav-buttons">
-      <button>Filtrar</button>
-      <button>Test Vocacional</button>
-      <button>Registrar</button>
-      <button class="premium">Premium + IA 🧠</button>
-    </div>
-  </header>
+    <div class="ms-auto d-flex align-items-center">
+        <input class="form-control me-2" type="search" placeholder="Buscar..." />
+        <button class="btn btn-primary me-2">Filtrar</button>
+        <a href="TestVocacional.html" class="btn btn-danger me-2">TestVocacional</a>
+        <button class="btn btn-success me-2">Registrar</button>
 
-  <!-- 🔹 SECCIÓN BANNER -->
-  <section class="banner">
-    <img src="/img/test + IA.png" alt="Mascota" class="penguin" />
-    <div class="banner-images">
-      <img src="test1.png" alt="">
-      <img src="test2.png" alt="">
-      <img src="test3.png" alt="">
+        <div class="premium-container">
+            <button class="btn premium-btn">Premium + IA</button>
+            <img src="img/c pingui.png" alt="Penguin mascot" class="penguin-img">
+        </div>
     </div>
-  </section>
+</nav>
 
-  <!-- 🔹 TÍTULO -->
-  <h2 class="section-title">TEST DE ORIENTACIÓN VOCACIONAL</h2>
-
-  <!-- 🔹 GALERÍA DE INFORMACIÓN -->
-  <section class="info-gallery">
-    <div class="card">
-      <img src="universidad.jpg" alt="">
-      <p>INFORMACIÓN</p>
-    </div>
-    <div class="card">
-      <img src="universidad.jpg" alt="">
-      <p>INFORMACIÓN</p>
-    </div>
-    <div class="card">
-      <img src="universidad.jpg" alt="">
-      <p>INFORMACIÓN</p>
-    </div>
-    <div class="card">
-      <img src="universidad.jpg" alt="">
-      <p>INFORMACIÓN</p>
-    </div>
-    <div class="card">
-      <img src="universidad.jpg" alt="">
-      <p>INFORMACIÓN</p>
-    </div>
-    <div class="card">
-      <img src="universidad.jpg" alt="">
-      <p>INFORMACIÓN</p>
-    </div>
-  </section>
-
-  <!-- 🔹 FOOTER -->
-  <footer>
-    <div class="footer-container">
-      <div>
-        <h3>Menú</h3>
-        <ul>
-          <li>Test Vocacional</li>
-          <li>Todas las Carreras</li>
-          <li>Profesiones</li>
-          <li>Orientación</li>
-        </ul>
+  <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/feria.jpg" class="d-block w-100" alt="banner1">
       </div>
-
-      <div>
-        <h3>Carreras Populares</h3>
-        <ul>
-          <li>Administración</li>
-          <li>Psicología</li>
-          <li>Medicina</li>
-          <li>Derecho</li>
-        </ul>
+      <div class="carousel-item">
+        <img src="img/feria.jpg" class="d-block w-100" alt="banner2">
       </div>
-
-      <div>
-        <h3>Artículos Populares</h3>
-        <ul>
-          <li>¿Qué estudiar Administración?</li>
-          <li>¿Por qué elegir Psicología?</li>
-          <li>¿Qué carrera es mejor para ti?</li>
-        </ul>
+      <div class="carousel-item">
+        <img src="img/feria.jpg" class="d-block w-100" alt="banner3">
       </div>
     </div>
-    <p class="footer-end">© 2025 ELIJEPE | Hecho con ❤️ en Perú</p>
-  </footer>
+    <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
 
+  <div class="main-container">
+<div id="filterPanel" class="filter-panel">
+    <h5 class="filter-title mb-4">Filtros Avanzados</h5>
+
+    <div class="filter-group mb-4">
+        <label for="rango" class="form-label fw-bold">Presupuesto (S/)</label>
+        <input type="range" id="rango" class="form-range" min="0" max="10000" step="100">
+        <div class="d-flex justify-content-between">
+            <small>Bajo</small>
+            <small>Alto</small>
+        </div>
+    </div>
+    
+    <div class="filter-group mb-4">
+        <label class="form-label fw-bold">Tipo de Institución</label>
+        <select class="form-select">
+            <option selected>Todos</option>
+            <option value="publica">Pública</option>
+            <option value="privada">Privada</option>
+        </select>
+    </div>
+
+    <div class="filter-group mb-4">
+        <label class="form-label fw-bold">Ubicación</label>
+        <select class="form-select">
+            <option selected>Todas</option>
+            <option>Lima</option>
+            <option>Arequipa</option>
+            <option>Trujillo</option>
+            <option>Cusco</option>
+        </select>
+    </div>
+
+    <hr class="filter-divider">
+
+    <div class="filter-group mb-4">
+        <label class="form-label fw-bold">Modalidad de Estudio</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="modalidad" id="presencial" checked>
+            <label class="form-check-label" for="presencial">Presencial</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="modalidad" id="virtual">
+            <label class="form-check-label" for="virtual">Virtual (Online)</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="modalidad" id="semipresencial">
+            <label class="form-check-label" for="semipresencial">Semipresencial</label>
+        </div>
+    </div>
+    
+    <div class="filter-group mb-4">
+        <label class="form-label fw-bold">Nivel Académico</label>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="pregrado">
+            <label class="form-check-label" for="pregrado">Pregrado / Licenciatura</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="postgrado">
+            <label class="form-check-label" for="postgrado">Postgrado / Maestría</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="tecnico">
+            <label class="form-check-label" for="tecnico">Técnico Superior</label>
+        </div>
+    </div>
+    
+    <div class="filter-group mb-4">
+        <label class="form-label fw-bold">Áreas de Interés</label>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="ingenieria">
+            <label class="form-check-label" for="ingenieria">Ingeniería y Tecnología</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="salud">
+            <label class="form-check-label" for="salud">Ciencias de la Salud</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="humanidades">
+            <label class="form-check-label" for="humanidades">Humanidades y Artes</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="negocios">
+            <label class="form-check-label" for="negocios">Negocios y Administración</label>
+        </div>
+    </div>
+
+    <hr class="filter-divider">
+
+    <button class="btn btn-primary w-100 mb-2 filter-apply-btn">
+        <i class="fas fa-filter me-2"></i> Aplicar Filtros
+    </button>
+    <button class="btn btn-outline-secondary w-100 btn-sm">Limpiar</button>
+</div>
+
+    <button id="toggleFilters" class="filter-toggle">&#10094;</button>
+
+    <div class="content-area">
+      <h3 class="text-center fw-bold mb-4">INFORMACIÓN</h3>
+      <div class="row g-4 px-4">
+        <div class="col-md-4">
+          <div class="card info-card">
+            <img src="img/campus.jpg" class="card-img-top">
+            <div class="card-body text-center">
+              <h6>INFORMACIÓN</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card info-card">
+            <img src="img/campus.jpg" class="card-img-top">
+            <div class="card-body text-center">
+              <h6>INFORMACIÓN</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card info-card">
+            <img src="img/campus.jpg" class="card-img-top">
+            <div class="card-body text-center">
+              <h6>INFORMACIÓN</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card info-card">
+            <img src="img/campus.jpg" class="card-img-top">
+            <div class="card-body text-center">
+              <h6>INFORMACIÓN</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card info-card">
+            <img src="img/campus.jpg" class="card-img-top">
+            <div class="card-body text-center">
+              <h6>INFORMACIÓN</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card info-card">
+            <img src="img/campus.jpg" class="card-img-top">
+            <div class="card-body text-center">
+              <h6>INFORMACIÓN</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card info-card">
+            <img src="img/campus.jpg" class="card-img-top">
+            <div class="card-body text-center">
+              <h6>INFORMACIÓN</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card info-card">
+            <img src="img/campus.jpg" class="card-img-top">
+            <div class="card-body text-center">
+              <h6>INFORMACIÓN</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card info-card">
+            <img src="img/campus.jpg" class="card-img-top">
+            <div class="card-body text-center">
+              <h6>INFORMACIÓN</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<section class="sponsored-universities container py-4">
+    <h3 class="text-center mb-4 sponsorship-title">Conoce los mejores del momento</h3>
+    <div class="row row-cols-2 row-cols-md-4 g-3 justify-content-center">
+        <div class="col">
+            <div class="sponsor-card">
+                <img src="img/UTP.webp" alt="Logo Universidad A" class="sponsor-logo">
+                <p class="sponsor-tag">Publicidad</p>
+            </div>
+        </div>
+        
+        <div class="col">
+            <div class="sponsor-card">
+                <img src="img/razones.webp" alt="Logo Universidad B" class="sponsor-logo">
+                <p class="sponsor-tag">Publicidad</p>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="sponsor-card">
+                <img src="img/feria.jpg" alt="Logo Universidad C" class="sponsor-logo">
+                <p class="sponsor-tag">Publicidad</p>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="sponsor-card">
+                <img src="img/distancia.webp" alt="Logo Universidad D" class="sponsor-logo">
+                <p class="sponsor-tag">Publicidad</p>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<footer class="footer-custom mt-5">
+    <div class="container py-5">
+        <div class="row text-start">
+            
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+                <h5 class="fw-bold mb-4">
+                    <i class="fas fa-list-alt me-2"></i> Menú
+                </h5>
+                <p><a href="#" class="footer-link">Test de Orientación Vocacional</a></p>
+                <p><a href="#" class="footer-link">Profesiones</a></p>
+                <p><a href="#" class="footer-link">Donde Estudiar</a></p>
+            </div>
+            
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+                <h5 class="fw-bold mb-4">
+                    <i class="fas fa-rocket me-2"></i> Carreras Populares
+                </h5>
+                <p><a href="#" class="footer-link">Administración</a></p>
+                <p><a href="#" class="footer-link">Psicología</a></p>
+                <p><a href="#" class="footer-link">Medicina</a></p>
+                <p><a href="#" class="footer-link">Ingeniería</a></p>
+            </div>
+            
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+                <h5 class="fw-bold mb-4">
+                    <i class="fas fa-book me-2"></i> Artículos Populares
+                </h5>
+                <p><a href="#" class="footer-link">¿Por qué estudiar Administración?</a></p>
+                <p><a href="#" class="footer-link">¿Por qué estudiar Turismo?</a></p>
+                <p><a href="#" class="footer-link">¿Por qué estudiar Comercio Exterior?</a></p>
+            </div>
+            
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <h5 class="fw-bold mb-4">
+                    <i class="fas fa-headset me-2"></i> Contáctanos
+                </h5>
+                <p class="mb-2">
+                    <i class="fas fa-envelope me-2"></i> ElijePe@gmail.com
+                </p>
+                <h5 class="fw-bold mt-4 mb-3">Síguenos</h5>
+                <div class="d-flex justify-content-start social-icons">
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="Logica.js"></script>
 </body>
 </html>
