@@ -25,5 +25,9 @@ public class VistaController {
     public String login(){
         return "login";
     }
+    @GetMapping("/IA_Premiun")
+    public String IA_Premiun(){
+        return "IA_Premiun";
+    }
     
 }

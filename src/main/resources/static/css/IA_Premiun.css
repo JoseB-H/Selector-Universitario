@@ -1,0 +1,159 @@
+
+:root {
+    --bg: #0f1720;
+    --card: #111827;
+    --muted: rgba(255,255,255,0.65);
+    --accent: #10b981;
+    --danger: #ef4444;
+    --btn-hover: rgba(16,185,129,0.1);
+}
+
+body {
+    background: var(--bg);
+    color: #fff;
+    font-family: "Inter", system-ui, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background: #00aaff;
+}
+
+.navbar .form-control {
+    background: #1f2937;
+    border: none;
+    color: #fff;
+}
+
+.navbar .form-control::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+/* Main content */
+.test-page-main-content {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.payments-container {
+    background: var(--card);
+    border-radius: 20px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 50px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+/* Plan cards */
+.plan-card {
+    background: #1f2937;
+    border-radius: 16px;
+    padding: 30px;
+    margin: 15px 0;
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+.plan-card.premium {
+    border-color: var(--accent);
+    background: #15202b;
+    box-shadow: 0 0 25px rgba(16,185,129,0.3);
+}
+
+.plan-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.duration {
+    font-size: 1rem;
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.feature-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+.feature-list li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.feature-list i {
+    color: var(--accent);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Botones */
+.btn-select-plan {
+    margin-top: auto;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 50px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-select-plan:hover {
+    background: var(--btn-hover);
+    color: var(--accent);
+}
+
+/* Badge popular */
+.plan-card .badge {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+}
+
+/* Footer */
+.footer-custom {
+    background: #111827;
+    color: #fff;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.footer-custom a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-custom a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 991px) {
+    .plan-card {
+        min-height: auto;
+    }
+    .plan-card .badge {
+        top: 10px;
+    }
+}
