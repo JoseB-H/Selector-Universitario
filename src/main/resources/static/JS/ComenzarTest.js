@@ -127,7 +127,7 @@
           <h4>¡Casi listo! Tus áreas más destacadas:</h4>
           <ol>${top.map(a=>`<li>${a[0]} (puntaje: ${a[1]})</li>`).join('')}</ol>
           <p>Regístrate para obtener un informe completo con recomendaciones personalizadas.</p>
-          <a href="/register" class="btn btn-success">Registrarme</a>
+          <a href="/login" class="btn btn-success">Registrarme</a>
         </div>`;
     }
 
