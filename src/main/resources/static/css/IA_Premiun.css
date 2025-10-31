@@ -132,7 +132,7 @@ body {
 
 /* Footer */
 .footer-custom {
-    background: #111827;
+    background: linear-gradient(90deg, #004d7f, #003355);
     color: #fff;
     padding-top: 50px;
     padding-bottom: 30px;
