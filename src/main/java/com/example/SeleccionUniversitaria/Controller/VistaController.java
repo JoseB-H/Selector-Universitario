@@ -21,5 +21,9 @@ public class VistaController {
     public String ComenzarTest() {
         return "ComenzarTest";
     }
+    @GetMapping("/login")
+    public String login(){
+        return "login";
+    }
     
 }
