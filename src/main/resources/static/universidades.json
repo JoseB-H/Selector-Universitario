@@ -13,7 +13,7 @@
     "idiomas": ["ingles"],
     "infraestructura": "moderna",
     "empleabilidad": "alta",
-    "imagen": "img/campus.jpg"
+    "imagen": "img/UTPfondo.jpeg"
   },
   {
     "nombre": "Universidad Nacional Mayor de San Marcos",
@@ -29,7 +29,7 @@
     "idiomas": ["ingles", "frances"],
     "infraestructura": "tradicional",
     "empleabilidad": "alta",
-    "imagen": "img/campus.jpg"
+    "imagen": "img/sanmarcos.png"
   },
   {
     "nombre": "Pontificia Universidad Católica del Perú",
@@ -45,7 +45,7 @@
     "idiomas": ["ingles", "aleman"],
     "infraestructura": "moderna",
     "empleabilidad": "alta",
-    "imagen": "img/campus.jpg"
+    "imagen": "img/PUCP.png"
   },
   {
     "nombre": "Universidad Nacional de Ingeniería",
@@ -61,7 +61,7 @@
     "idiomas": ["ingles"],
     "infraestructura": "moderna",
     "empleabilidad": "alta",
-    "imagen": "img/campus.jpg"
+    "imagen": "img/UNI.png"
   },
   {
     "nombre": "Universidad Peruana Cayetano Heredia",
@@ -77,7 +77,7 @@
     "idiomas": ["ingles"],
     "infraestructura": "moderna",
     "empleabilidad": "alta",
-    "imagen": "img/campus.jpg"
+    "imagen": "img/CAYETANO.png"
   },
   {
     "nombre": "Universidad Nacional de Trujillo",
@@ -93,7 +93,7 @@
     "idiomas": ["ingles"],
     "infraestructura": "tradicional",
     "empleabilidad": "media",
-    "imagen": "img/campus.jpg"
+    "imagen": "img/TRUJILLO.png"
   },
   {
     "nombre": "Universidad Católica de Santa María",
@@ -109,7 +109,7 @@
     "idiomas": ["ingles"],
     "infraestructura": "moderna",
     "empleabilidad": "alta",
-    "imagen": "img/campus.jpg"
+    "imagen": "img/CATOLICA.png"
   },
   {
     "nombre": "Universidad Nacional del Altiplano",
@@ -125,7 +125,7 @@
     "idiomas": ["ingles"],
     "infraestructura": "tradicional",
     "empleabilidad": "media",
-    "imagen": "img/campus.jpg"
+    "imagen": "img/PUNO.png"
   },
   {
     "nombre": "Universidad ESAN",
@@ -141,7 +141,7 @@
     "idiomas": ["ingles", "frances"],
     "infraestructura": "moderna",
     "empleabilidad": "alta",
-    "imagen": "img/campus.jpg"
+    "imagen": "img/ESAN.png"
   },
   {
     "nombre": "Universidad del Pacífico",
@@ -157,7 +157,7 @@
     "idiomas": ["ingles"],
     "infraestructura": "moderna",
     "empleabilidad": "muy alta",
-    "imagen": "img/campus.jpg"
+    "imagen": "img/PACIFICO.png"
   },
   {
     "nombre": "Universidad Nacional del Cusco",
@@ -173,7 +173,7 @@
     "idiomas": ["ingles"],
     "infraestructura": "tradicional",
     "empleabilidad": "media",
-    "imagen": "img/campus.jpg"
+    "imagen": "img/CUSCO.jfif"
   },
   {
     "nombre": "Universidad Tecnológica del Perú",
@@ -205,7 +205,7 @@
     "idiomas": ["ingles"],
     "infraestructura": "moderna",
     "empleabilidad": "alta",
-    "imagen": "img/campus.jpg"
+    "imagen": "img/LOYOLA.png"
   },
   {
     "nombre": "Universidad Científica del Sur",
@@ -221,7 +221,7 @@
     "idiomas": ["ingles"],
     "infraestructura": "moderna",
     "empleabilidad": "alta",
-    "imagen": "img/campus.jpg"
+    "imagen": "img/SUR.png"
   },
   {
     "nombre": "Universidad Nacional de Piura",
@@ -237,7 +237,7 @@
     "idiomas": ["ingles"],
     "infraestructura": "tradicional",
     "empleabilidad": "media",
-    "imagen": "img/campus.jpg"
+    "imagen": "img/PIURA.png"
   },
   {
     "nombre": "Universidad Continental",
@@ -253,7 +253,7 @@
     "idiomas": ["ingles"],
     "infraestructura": "moderna",
     "empleabilidad": "alta",
-    "imagen": "img/campus.jpg"
+    "imagen": "img/CONTINETAL.png"
   },
   {
     "nombre": "Universidad Nacional de San Agustín de Arequipa",
@@ -269,6 +269,6 @@
     "idiomas": ["ingles"],
     "infraestructura": "tradicional",
     "empleabilidad": "media",
-    "imagen": "img/campus.jpg"
+    "imagen": "img/SAN AGUSTIN.png"
   }
 ]

@@ -1,21 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
   const contenedor = document.getElementById("universidadesContainer");
   const filterPanel = document.getElementById("filterPanel");
-  const clearButton = document.querySelector('.filter-panel .btn-outline-secondary'); // Botón de limpiar
+  const clearButton = document.querySelector('.filter-panel .btn-outline-secondary');
 
-  // Variables de control
   let todasLasUniversidades = [];
   let universidadesFiltradas = [];
   let mostradas = 0;
-  const cantidadPorPagina = 9; // 👈 ahora 9 por defecto
+  const cantidadPorPagina = 9;
 
-  // Crear botón "Ver más"
   const verMasBtn = document.createElement("button");
   verMasBtn.className = "btn btn-primary mt-4 d-block mx-auto";
   verMasBtn.textContent = "Ver más";
   verMasBtn.style.display = "none";
 
-  // === Mostrar universidades con paginación ===
   function mostrarUniversidades(universidades, reiniciar = false) {
     if (reiniciar) {
       contenedor.innerHTML = "";
@@ -50,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
       contenedor.appendChild(card);
     });
 
-    // Mostrar u ocultar botón según queden más universidades
     if (mostradas < universidades.length) {
       verMasBtn.style.display = "block";
       if (!contenedor.parentElement.contains(verMasBtn)) {
@@ -61,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // === Cargar JSON ===
   fetch("/universidades.json")
     .then(res => {
       if (!res.ok) throw new Error("No se pudo cargar el archivo JSON");
@@ -79,7 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
       contenedor.innerHTML = `<p class="text-danger text-center">Error al cargar las universidades.</p>`;
     });
 
-  // === Llenar filtros dinámicos ===
   function llenarFiltros(universidades) {
     const tipos = [...new Set(universidades.map(u => u.tipo))];
     const ubicaciones = [...new Set(universidades.map(u => u.ubicacion))];
@@ -87,21 +81,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const niveles = [...new Set(universidades.flatMap(u => u.nivel))];
     const areas = [...new Set(universidades.flatMap(u => u.area))];
 
-    // Tipo
     const tipoSelect = filterPanel.querySelector('select[name="tipo"]');
     if (tipoSelect) {
       tipoSelect.innerHTML = '<option value="todos">Todos</option>' +
         tipos.map(t => `<option value="${t.toLowerCase()}">${t}</option>`).join('');
     }
 
-    // Ubicación
     const ubicacionSelect = filterPanel.querySelector('select[name="ubicacion"]');
     if (ubicacionSelect) {
       ubicacionSelect.innerHTML = '<option value="todas">Todas</option>' +
         ubicaciones.map(u => `<option value="${u.toLowerCase()}">${u}</option>`).join('');
     }
 
-    // Modalidad
     const modalContainer = filterPanel.querySelector("#modalidadContainer");
     if (modalContainer) {
       modalContainer.innerHTML = modalidades.map(m => `
@@ -112,7 +103,6 @@ document.addEventListener("DOMContentLoaded", () => {
       `).join('');
     }
 
-    // Nivel
     const nivelContainer = filterPanel.querySelector("#nivelContainer");
     if (nivelContainer) {
       nivelContainer.innerHTML = niveles.map(n => `
@@ -123,7 +113,6 @@ document.addEventListener("DOMContentLoaded", () => {
       `).join('');
     }
 
-    // Área
     const areaContainer = filterPanel.querySelector("#areaContainer");
     if (areaContainer) {
       areaContainer.innerHTML = areas.map(a => `
@@ -135,7 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // === Aplicar filtros ===
   function aplicarFiltros() {
     let filtradas = [...todasLasUniversidades];
 
@@ -166,25 +154,21 @@ document.addEventListener("DOMContentLoaded", () => {
     mostrarUniversidades(universidadesFiltradas, true);
   }
 
-  // === Evento del botón "Ver más" ===
   verMasBtn.addEventListener("click", () => {
     mostrarUniversidades(universidadesFiltradas);
   });
 
-  // === Evento del botón "Limpiar filtros" ===
   if (clearButton) {
     clearButton.addEventListener("click", () => {
-      // Reset selects
       const selects = filterPanel.querySelectorAll("select");
       selects.forEach(select => select.selectedIndex = 0);
 
-      // Reset checkboxes y radios
       const inputs = filterPanel.querySelectorAll("input[type='checkbox'], input[type='radio']");
       inputs.forEach(i => i.checked = false);
 
-      // Volver al estado inicial con todas las universidades (9 primeras)
       universidadesFiltradas = [...todasLasUniversidades];
-      mostrarUniversidades(universidadesFiltradas, true);
+      mostradas = 0; // 🔥 reinicia contador
+      mostrarUniversidades(universidadesFiltradas.slice(0, cantidadPorPagina), true); // 👈 muestra solo 9 por defecto
     });
   }
 });
