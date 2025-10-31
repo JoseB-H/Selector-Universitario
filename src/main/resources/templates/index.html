@@ -63,87 +63,176 @@
 <div id="filterPanel" class="filter-panel">
     <h5 class="filter-title mb-4">Filtros Avanzados</h5>
 
+    <!-- 1️⃣ Presupuesto -->
     <div class="filter-group mb-4">
         <label for="rango" class="form-label fw-bold">Presupuesto (S/)</label>
         <input type="range" id="rango" class="form-range" min="0" max="10000" step="100">
         <div class="d-flex justify-content-between">
-            <small>Bajo</small>
-            <small>Alto</small>
+            <small>Bajo</small><small>Alto</small>
         </div>
     </div>
-    
+
+    <!-- 2️⃣ Tipo -->
     <div class="filter-group mb-4">
         <label class="form-label fw-bold">Tipo de Institución</label>
-        <select class="form-select">
-            <option selected>Todos</option>
+        <select class="form-select" name="tipo">
+            <option value="todos" selected>Todos</option>
             <option value="publica">Pública</option>
             <option value="privada">Privada</option>
         </select>
     </div>
 
+    <!-- 3️⃣ Ubicación -->
     <div class="filter-group mb-4">
         <label class="form-label fw-bold">Ubicación</label>
-        <select class="form-select">
-            <option selected>Todas</option>
-            <option>Lima</option>
-            <option>Arequipa</option>
-            <option>Trujillo</option>
-            <option>Cusco</option>
+        <select class="form-select" name="ubicacion">
+            <option value="todas" selected>Todas</option>
+            <option value="lima">Lima</option>
+            <option value="arequipa">Arequipa</option>
+            <option value="cusco">Cusco</option>
+            <option value="trujillo">Trujillo</option>
+            <option value="piura">Piura</option>
         </select>
     </div>
 
     <hr class="filter-divider">
 
+    <!-- 4️⃣ Modalidad -->
     <div class="filter-group mb-4">
         <label class="form-label fw-bold">Modalidad de Estudio</label>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="modalidad" id="presencial" checked>
-            <label class="form-check-label" for="presencial">Presencial</label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="modalidad" id="virtual">
-            <label class="form-check-label" for="virtual">Virtual (Online)</label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="modalidad" id="semipresencial">
-            <label class="form-check-label" for="semipresencial">Semipresencial</label>
+        <div id="modalidadContainer">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="modalidad" id="presencial" checked>
+                <label class="form-check-label" for="presencial">Presencial</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="modalidad" id="virtual">
+                <label class="form-check-label" for="virtual">Virtual</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="modalidad" id="semipresencial">
+                <label class="form-check-label" for="semipresencial">Semipresencial</label>
+            </div>
         </div>
     </div>
-    
+
+    <!-- 5️⃣ Nivel -->
     <div class="filter-group mb-4">
         <label class="form-label fw-bold">Nivel Académico</label>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="pregrado">
-            <label class="form-check-label" for="pregrado">Pregrado / Licenciatura</label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="postgrado">
-            <label class="form-check-label" for="postgrado">Postgrado / Maestría</label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="tecnico">
-            <label class="form-check-label" for="tecnico">Técnico Superior</label>
+        <div id="nivelContainer">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="pregrado">
+                <label class="form-check-label" for="pregrado">Pregrado / Licenciatura</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="postgrado">
+                <label class="form-check-label" for="postgrado">Postgrado / Maestría</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="tecnico">
+                <label class="form-check-label" for="tecnico">Técnico Superior</label>
+            </div>
         </div>
     </div>
-    
+
+    <!-- 6️⃣ Áreas -->
     <div class="filter-group mb-4">
         <label class="form-label fw-bold">Áreas de Interés</label>
+        <div id="areaContainer">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="ingenieria">
+                <label class="form-check-label" for="ingenieria">Ingeniería y Tecnología</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="salud">
+                <label class="form-check-label" for="salud">Ciencias de la Salud</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="humanidades">
+                <label class="form-check-label" for="humanidades">Humanidades y Artes</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="negocios">
+                <label class="form-check-label" for="negocios">Negocios y Administración</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7️⃣ Duración -->
+    <div class="filter-group mb-4">
+        <label class="form-label fw-bold">Duración del Programa</label>
+        <select class="form-select" name="duracion">
+            <option value="todas" selected>Todas</option>
+            <option value="corta">Menos de 2 años</option>
+            <option value="media">2 - 4 años</option>
+            <option value="larga">Más de 4 años</option>
+        </select>
+    </div>
+
+    <!-- 8️⃣ Idioma -->
+    <div class="filter-group mb-4">
+        <label class="form-label fw-bold">Idioma de Enseñanza</label>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="ingenieria">
-            <label class="form-check-label" for="ingenieria">Ingeniería y Tecnología</label>
+            <input class="form-check-input" type="checkbox" id="espanol">
+            <label class="form-check-label" for="espanol">Español</label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="salud">
-            <label class="form-check-label" for="salud">Ciencias de la Salud</label>
+            <input class="form-check-input" type="checkbox" id="ingles">
+            <label class="form-check-label" for="ingles">Inglés</label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="humanidades">
-            <label class="form-check-label" for="humanidades">Humanidades y Artes</label>
+            <input class="form-check-input" type="checkbox" id="bilingue">
+            <label class="form-check-label" for="bilingue">Bilingüe</label>
+        </div>
+    </div>
+
+    <!-- 9️⃣ Grado -->
+    <div class="filter-group mb-4">
+        <label class="form-label fw-bold">Grado Obtenido</label>
+        <select class="form-select" name="grado">
+            <option value="todos" selected>Todos</option>
+            <option value="bachiller">Bachiller</option>
+            <option value="titulo">Título Profesional</option>
+            <option value="maestria">Maestría</option>
+            <option value="doctorado">Doctorado</option>
+        </select>
+    </div>
+
+    <!-- 🔟 Internacional -->
+    <div class="filter-group mb-4">
+        <label class="form-label fw-bold">Oportunidades Internacionales</label>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="intercambio">
+            <label class="form-check-label" for="intercambio">Intercambio Académico</label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="negocios">
-            <label class="form-check-label" for="negocios">Negocios y Administración</label>
+            <input class="form-check-input" type="checkbox" id="doblegrado">
+            <label class="form-check-label" for="doblegrado">Doble Grado</label>
         </div>
+    </div>
+
+    <!-- 11️⃣ Becas -->
+    <div class="filter-group mb-4">
+        <label class="form-label fw-bold">Becas Disponibles</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="beca" id="si">
+            <label class="form-check-label" for="si">Sí</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="beca" id="no">
+            <label class="form-check-label" for="no">No</label>
+        </div>
+    </div>
+
+    <!-- 12️⃣ Empleabilidad -->
+    <div class="filter-group mb-4">
+        <label class="form-label fw-bold">Empleabilidad</label>
+        <select class="form-select" name="empleabilidad">
+            <option value="todas" selected>Todas</option>
+            <option value="alta">Alta (90%+)</option>
+            <option value="media">Media (70–89%)</option>
+            <option value="baja">Baja (&lt;70%)</option>
+        </select>
     </div>
 
     <hr class="filter-divider">
@@ -154,119 +243,157 @@
     <button class="btn btn-outline-secondary w-100 btn-sm">Limpiar</button>
 </div>
 
+
     <button id="toggleFilters" class="filter-toggle">&#10094;</button>
 
-    <div class="content-area">
-      <h3 class="text-center fw-bold mb-4">INFORMACIÓN</h3>
-      <div class="row g-4 px-4">
-        <div class="col-md-4">
-          <div class="card info-card">
-            <img src="img/campus.jpg" class="card-img-top">
-            <div class="card-body text-center">
-              <h6>INFORMACIÓN</h6>
-            </div>
-          </div>
+<div class="container mt-4">
+  <div class="row" id="universidadesContainer">
+    <!-- Aquí se insertarán las tarjetas desde el JSON -->
+  </div>
+</div>
+  </div>
+
+<section class="ranking-promotions container py-5 position-relative">
+  <div class="text-center mb-4">
+    <h3 class="sponsorship-title fw-bold">Ranking & Tendencias Universitarias</h3>
+    <p class="text-muted small">
+      Lo más popular en redes: universidades que marcan tendencia en educación, innovación y comunidad estudiantil.
+    </p>
+  </div>
+
+  <!-- Ranking principal -->
+  <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+    <div class="col">
+      <div class="promo-card position-relative overflow-hidden shadow-sm">
+        <div class="promo-badge">#1 en TikTok</div>
+        <img src="img/tiktokUTP.PNG" alt="Universidad viral" class="promo-img w-100">
+        <div class="promo-overlay d-flex flex-column justify-content-end p-3">
+          <h5 class="fw-bold text-white">Universidad Creativa del Perú</h5>
+          <p class="text-white-50 small mb-1">Más de 2M de visualizaciones en TikTok</p>
+          <button class="btn btn-light btn-sm fw-bold mt-2">Ver más</button>
         </div>
-        <div class="col-md-4">
-          <div class="card info-card">
-            <img src="img/campus.jpg" class="card-img-top">
-            <div class="card-body text-center">
-              <h6>INFORMACIÓN</h6>
-            </div>
-          </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="promo-card position-relative overflow-hidden shadow-sm">
+        <div class="promo-badge">#2 Ranking Nacional </div>
+        <img src="img/Famosa1.webp" alt="Universidad destacada" class="promo-img w-100">
+        <div class="promo-overlay d-flex flex-column justify-content-end p-3">
+          <h5 class="fw-bold text-white">Universidad de Excelencia Global</h5>
+          <p class="text-white-50 small mb-1">Reconocida por su innovación académica</p>
+          <button class="btn btn-light btn-sm fw-bold mt-2">Ver más</button>
         </div>
-        <div class="col-md-4">
-          <div class="card info-card">
-            <img src="img/campus.jpg" class="card-img-top">
-            <div class="card-body text-center">
-              <h6>INFORMACIÓN</h6>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card info-card">
-            <img src="img/campus.jpg" class="card-img-top">
-            <div class="card-body text-center">
-              <h6>INFORMACIÓN</h6>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card info-card">
-            <img src="img/campus.jpg" class="card-img-top">
-            <div class="card-body text-center">
-              <h6>INFORMACIÓN</h6>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card info-card">
-            <img src="img/campus.jpg" class="card-img-top">
-            <div class="card-body text-center">
-              <h6>INFORMACIÓN</h6>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card info-card">
-            <img src="img/campus.jpg" class="card-img-top">
-            <div class="card-body text-center">
-              <h6>INFORMACIÓN</h6>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card info-card">
-            <img src="img/campus.jpg" class="card-img-top">
-            <div class="card-body text-center">
-              <h6>INFORMACIÓN</h6>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card info-card">
-            <img src="img/campus.jpg" class="card-img-top">
-            <div class="card-body text-center">
-              <h6>INFORMACIÓN</h6>
-            </div>
-          </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="promo-card position-relative overflow-hidden shadow-sm">
+        <div class="promo-badge">Promoción</div>
+        <img src="img/promocion.webp" alt="Promoción universitaria" class="promo-img w-100">
+        <div class="promo-overlay d-flex flex-column justify-content-end p-3">
+          <h5 class="fw-bold text-white">Universidad Digital 360°</h5>
+          <p class="text-white-50 small mb-1">Beca del 50% para nuevos ingresos</p>
+          <button class="btn btn-light btn-sm fw-bold mt-2">Aprovechar</button>
         </div>
       </div>
     </div>
   </div>
 
-<section class="sponsored-universities container py-4">
-    <h3 class="text-center mb-4 sponsorship-title">Conoce los mejores del momento</h3>
-    <div class="row row-cols-2 row-cols-md-4 g-3 justify-content-center">
-        <div class="col">
-            <div class="sponsor-card">
-                <img src="img/UTP.webp" alt="Logo Universidad A" class="sponsor-logo">
-                <p class="sponsor-tag">Publicidad</p>
-            </div>
+  <!-- Ranking emergente -->
+  <div class="emerging-universities mt-5 text-center">
+    <h4 class="fw-bold text-primary mb-4">Universidades Emergentes del 2025</h4>
+    <div class="row row-cols-2 row-cols-md-4 g-3">
+      <div class="col">
+        <div class="sponsor-card">
+          <img src="img/INNNOVA.webp" alt="Uni Innovadora" class="sponsor-logo">
+          <p class="sponsor-tag">Innovación</p>
         </div>
-        
-        <div class="col">
-            <div class="sponsor-card">
-                <img src="img/razones.webp" alt="Logo Universidad B" class="sponsor-logo">
-                <p class="sponsor-tag">Publicidad</p>
-            </div>
+      </div>
+      <div class="col">
+        <div class="sponsor-card">
+          <img src="img/EMPRENDE.webp" alt="Uni Emprendedora" class="sponsor-logo">
+          <p class="sponsor-tag">Emprendimiento</p>
         </div>
-
-        <div class="col">
-            <div class="sponsor-card">
-                <img src="img/feria.jpg" alt="Logo Universidad C" class="sponsor-logo">
-                <p class="sponsor-tag">Publicidad</p>
-            </div>
+      </div>
+      <div class="col">
+        <div class="sponsor-card">
+          <img src="img/TECNO.webp" alt="Uni Tech" class="sponsor-logo">
+          <p class="sponsor-tag">Tecnología</p>
         </div>
-
-        <div class="col">
-            <div class="sponsor-card">
-                <img src="img/distancia.webp" alt="Logo Universidad D" class="sponsor-logo">
-                <p class="sponsor-tag">Publicidad</p>
-            </div>
+      </div>
+      <div class="col">
+        <div class="sponsor-card">
+          <img src="img/internacional.webp" alt="Uni Global" class="sponsor-logo">
+          <p class="sponsor-tag">Internacional</p>
         </div>
-        
+      </div>
     </div>
+  </div>
+
+  <!-- Testimonios -->
+  <div class="student-testimonials text-center mt-5">
+    <h4 class="fw-bold text-primary mb-4">💬 Opiniones de Estudiantes</h4>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm p-3">
+          <p class="fst-italic">"Elegí mi universidad gracias a ELIJEPE y no me arrepiento. ¡La comunidad es increíble!"</p>
+          <h6 class="fw-bold text-primary mt-2"> Daniel Turin, UTP</h6>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm p-3">
+          <p class="fst-italic">"Las becas y ferias mostradas me ayudaron a decidir con confianza. Súper útil."</p>
+          <h6 class="fw-bold text-primary mt-2"> Diego claros, UTP</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tendencias académicas -->
+  <div class="academic-trends text-center mt-5">
+    <h4 class="fw-bold text-primary mb-4">Tendencias Académicas 2025</h4>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="sponsor-card">
+          <p class="fw-bold text-primary mb-2">Carreras STEM</p>
+          <p class="small text-muted">+35% de aumento en matrículas</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="sponsor-card">
+          <p class="fw-bold text-primary mb-2">Educación Híbrida</p>
+          <p class="small text-muted">La modalidad más elegida del año</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="sponsor-card">
+          <p class="fw-bold text-primary mb-2">Empleabilidad Global</p>
+          <p class="small text-muted">+20% de convenios internacionales</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TikTok Feed -->
+  <div class="text-center mt-5">
+    <h4 class="fw-bold text-primary mb-3"></h4>
+    <div class="tiktok-feed d-flex justify-content-center gap-3 flex-wrap">
+      <iframe src="https://www.tiktok.com/embed/7356789012345678901" width="280" height="500" allowfullscreen></iframe>
+      <iframe src="https://www.tiktok.com/embed/7234567890123456789" width="280" height="500" allowfullscreen></iframe>
+      <iframe src="https://www.tiktok.com/embed/7356789012345678901" width="280" height="500" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Newsletter -->
+  <div class="newsletter text-center mt-5">
+    <h4 class="fw-bold text-primary mb-3">📰 Mantente al día</h4>
+    <p class="text-muted small">Recibe en tu correo las últimas ferias, becas y tendencias universitarias.</p>
+    <form class="d-flex justify-content-center gap-2 mt-3">
+      <input type="email" class="form-control w-50" placeholder="Tu correo electrónico" required>
+      <button class="btn btn-primary fw-bold">Suscribirme</button>
+    </form>
+  </div>
 </section>
 
 <footer class="footer-custom mt-5">
@@ -320,5 +447,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="JS/Logica.js"></script>
+  <script src="JS/universidades.js"></script>
 </body>
 </html>
